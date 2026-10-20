@@ -52,10 +52,21 @@
     margin: 14px auto 0;
 }
 
-.nosotros .nosotros-contenido h3 {
+.nosotros-contenido {
+        max-width: 950px;
+        margin: 0 auto;
+        padding: 35px 40px;
+        background-color: #ffffff;
+        border: 1px solid #eeeeee;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        line-height: 1.9;
+}
+
+.nosotros-contenido h3 {
     font-size: 20px;
 }
 
-.nosotros .nosotros-contenido p {
+.nosotros-contenido p {
     font-size: 15px;
 }
