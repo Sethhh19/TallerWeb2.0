@@ -66,11 +66,16 @@
 .nosotros-contenido h3 {
     color: #000000;
     font-size: 22px;
-    font-weight: 600;
+    font-weight: 525;
     margin-top: 28px;
     margin-bottom: 12px;
     padding-left: 14px;
     border-left: 4px solid #8c1212;
+}
+
+.nosotros-contenido h3:first-child {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .nosotros-contenido p {
