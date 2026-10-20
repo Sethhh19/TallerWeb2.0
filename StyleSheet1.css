@@ -3,7 +3,7 @@
 }
 
 h1, h2, h3 {
-    font-family: 'Poppins', Arial, sans-serif; /* títulos */
+    font-family: 'Playfair Display', Georgia, serif;
 }
 
 .encabezado {
@@ -83,7 +83,7 @@ h1, h2, h3 {
         border: 1px solid #ddd;
         border-radius: 20px;
         padding: 8px 18px;
-        font-family: 'Poppins', Arial, sans-serif;
+        font-family: 'Inter', Arial, sans-serif;
         font-size: 0.9rem;
         transition: background 0.3s ease, color 0.3s ease;
 }
