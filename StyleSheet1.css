@@ -12,12 +12,16 @@ h1, h2, h3 {
 }
 
 .encabezado h1 {
-        text-transform: uppercase;
-        letter-spacing: 3px; /* letras más separadas = más elegante */
+    text-transform: uppercase;
+    letter-spacing: 3px; /* letras más separadas = más elegante */
+    font-weight: 700;          /* más negrita */
 }
 
 .subtitulo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; /* cursiva elegante */
     font-size: 1.6rem;
+    font-weight: 600;
 }
 
 .productos {
@@ -42,7 +46,7 @@ h1, h2, h3 {
     width: 100%;
     max-width: 220px;
     min-height: 260px;
-    border: 1px solid #ddd; /* borde fino y suave */
+    border: 1px solid #ddd;
     border-radius: 20px;
     padding: 16px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -71,6 +75,7 @@ h1, h2, h3 {
 
 .productos h2 {
     letter-spacing: 2px;
+    font-weight: 700;
 }
 
 .producto h3 {
@@ -102,11 +107,57 @@ h1, h2, h3 {
             color: #fff;
 }
 
-@media (max-width: 600px) {
+/* Computadoras */
+@media (min-width: 1400px) {
     .productos {
-        flex-direction: column;
-        align-items: center;
+        max-width: 1350px;
+        gap: 40px;
+    }
+
+    .producto {
+        max-width: 250px;
+        min-height: 280px;
+    }
+}
+
+/* Laptops */
+@media (max-width: 1100px) {
+    .productos {
+        gap: 20px;
+    }
+
+    .producto {
+        max-width: 200px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+    .productos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 20px;
+    }
+
+    .producto {
+        max-width: 220px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+    .encabezado h1 {
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+    }
+
+    .subtitulo {
+        font-size: 1.3rem;
+    }
+
+    .productos {
+        grid-template-columns: 1fr;
         gap: 30px;
+        padding: 15px;
     }
 
     .lista-productos {
@@ -114,47 +165,36 @@ h1, h2, h3 {
         grid-template-columns: repeat(2, 1fr);
         gap: 12px;
         width: 100%;
+        align-items: stretch;
     }
 
     .producto {
         width: auto;
-        padding: 10px;
-    }
-}
-
-
-@media (max-width: 900px) {
-    .productos {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .productos {
-        grid-template-columns: 1fr;
-
-    }
-
-    .lista-productos {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-        width: 100%;
-        align-items: stretch; /* los dos cuadros de la fila miden lo mismo */
-    }
-
-    .producto {
         max-width: none;
-        aspect-ratio: auto;
         min-height: 160px;
         padding: 10px;
     }
 
         .producto h3 {
-            font-size: 0.95rem;
+            font-size: 1.1rem;
         }
 
         .producto p {
             font-size: 0.8rem;
         }
+}
+
+/* Celulares pequeños*/
+@media (max-width: 380px) {
+    .productos {
+        padding: 10px;
+    }
+
+    .lista-productos {
+        gap: 8px;
+    }
+
+    .producto h3 {
+        font-size: 1rem;
+    }
 }
