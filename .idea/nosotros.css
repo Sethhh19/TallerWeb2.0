@@ -34,7 +34,12 @@
 }
 
 .nosotros .titulo-seccion h2 {
-    font-size: 26px;
+    color: #24262b;
+    font-size: 28px;
+    font-weight: 550;
+    margin: 0;
+    position: relative;
+    padding-bottom: 18px;
 }
 
 .nosotros .nosotros-contenido h3 {
