@@ -64,7 +64,13 @@
 }
 
 .nosotros-contenido h3 {
-    font-size: 20px;
+    color: #000000;
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 28px;
+    margin-bottom: 12px;
+    padding-left: 14px;
+    border-left: 4px solid #8c1212;
 }
 
 .nosotros-contenido p {
