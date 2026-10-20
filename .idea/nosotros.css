@@ -1,3 +1,15 @@
+.body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Popins', Arial, sans-serif;
+    color: #333333;
+    background-color: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 .nosotros {
     padding: 30px 16px;
 }
