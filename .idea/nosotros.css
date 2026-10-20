@@ -25,18 +25,22 @@
     margin-bottom: 40px;
 }
 
-.titulo-seccion h2 {
+.nosotros .titulo-seccion p {
+    color: #8c1212;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.nosotros .titulo-seccion h2 {
     font-size: 26px;
 }
 
-.titulo-seccion p {
-    font-size: 12px;
-}
-
-.nosotros-contenido h3 {
+.nosotros .nosotros-contenido h3 {
     font-size: 20px;
 }
 
-.nosotros-contenido p {
+.nosotros .nosotros-contenido p {
     font-size: 15px;
 }
