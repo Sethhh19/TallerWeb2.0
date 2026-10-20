@@ -3,7 +3,7 @@
 }
 
 h1, h2, h3 {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Cormorant Garamond', Georgia, serif;
 }
 
 .encabezado {
@@ -13,6 +13,7 @@ h1, h2, h3 {
 
 .encabezado h1 {
         text-transform: uppercase;
+        letter-spacing: 3px; /* letras más separadas = más elegante */
 }
 
 .subtitulo {
@@ -66,6 +67,14 @@ h1, h2, h3 {
 .producto p {
         color: #777;
         font-size: 0.9rem;
+}
+
+.productos h2 {
+    letter-spacing: 2px;
+}
+
+.producto h3 {
+    font-size: 1.3rem; /* esta fuente se ve más chica, se compensa */
 }
 
 
