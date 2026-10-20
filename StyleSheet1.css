@@ -1,3 +1,94 @@
-﻿body
-{
+﻿.encabezado {
+    text-align: center;
+    padding: 30px 20px 10px;
+}
+
+.encabezado h1 {
+        text-transform: uppercase;
+}
+
+.subtitulo {
+    font-size: 1.6rem;
+}
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 20px;
+    text-align: center;
+}
+
+.lista-productos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.producto {
+    width: 200px;
+    aspect-ratio: 1 / 1;
+    border: 2px solid #333;
+    padding: 16px;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.producto:hover {
+        transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    .productos {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .lista-productos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        width: 100%;
+    }
+
+    .producto {
+        width: auto;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .productos {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .lista-productos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        width: 100%;
+    }
+
+    .producto {
+        width: auto;
+        aspect-ratio: auto; /* quita el cuadrado perfecto */
+        min-height: 160px; /* altura mínima igual para todos */
+        padding: 10px;
+    }
+
+    .producto h3 {
+            font-size: 0.95rem;
+    }
+
+    .producto p {
+            font-size: 0.8rem;
+    }
 }
