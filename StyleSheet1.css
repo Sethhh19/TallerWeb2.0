@@ -68,6 +68,31 @@ h1, h2, h3 {
         font-size: 0.9rem;
 }
 
+
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* en celular baja a otra línea si no cabe */
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.menu a {
+        text-decoration: none;
+        color: #333;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        padding: 8px 18px;
+        font-family: 'Poppins', Arial, sans-serif;
+        font-size: 0.9rem;
+        transition: background 0.3s ease, color 0.3s ease;
+}
+
+.menu a:hover {
+            background: #333;
+            color: #fff;
+}
+
 @media (max-width: 600px) {
     .productos {
         flex-direction: column;
