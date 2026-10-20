@@ -11,11 +11,11 @@ h1, h2, h3 {
     padding: 30px 20px 10px;
 }
 
-.encabezado h1 {
-    text-transform: uppercase;
-    letter-spacing: 3px; /* letras más separadas = más elegante */
-    font-weight: 700;          /* más negrita */
-}
+    .encabezado h1 {
+        text-transform: uppercase;
+        letter-spacing: 3px; /* letras más separadas = más elegante */
+        font-weight: 700; /* más negrita */
+    }
 
 .subtitulo {
     font-family: 'Cormorant Garamond', Georgia, serif;
@@ -55,23 +55,23 @@ h1, h2, h3 {
     justify-content: center;
 }
 
-.producto:hover {
+    .producto:hover {
         transform: translateY(-6px) scale(1.05); /* se levanta y crece */
         box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* sombra */
-}
+    }
 
-.producto img {
+    .producto img {
         display: block;
         margin: 0 auto 10px;
         width: 70px;
         height: 70px;
         object-fit: contain;
-}
+    }
 
-.producto p {
+    .producto p {
         color: #777;
         font-size: 0.9rem;
-}
+    }
 
 .productos h2 {
     letter-spacing: 2px;
@@ -91,7 +91,7 @@ h1, h2, h3 {
     margin-top: 20px;
 }
 
-.menu a {
+    .menu a {
         text-decoration: none;
         color: #333;
         border: 1px solid #ddd;
@@ -100,12 +100,12 @@ h1, h2, h3 {
         font-family: 'Inter', Arial, sans-serif;
         font-size: 0.9rem;
         transition: background 0.3s ease, color 0.3s ease;
-}
+    }
 
-.menu a:hover {
+        .menu a:hover {
             background: #333;
             color: #fff;
-}
+        }
 
 /* Computadoras */
 @media (min-width: 1400px) {
