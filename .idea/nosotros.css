@@ -81,3 +81,43 @@
 .nosotros-contenido p {
     font-size: 15px;
 }
+
+.mensaje {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.mensaje-contenido {
+    background: white;
+    width: 350px;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.mensaje-contenido h2 {
+    color: #e91e63;
+}
+
+.mensaje-contenido p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.mensaje-contenido button {
+    background: #e91e63;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+}
