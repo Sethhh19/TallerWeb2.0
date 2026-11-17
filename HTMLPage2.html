@@ -1,11 +1,10 @@
 ﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="es">
 <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="StyleSheet1.css" />
-    <title>Hola</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo | Bisagras, corredoras y herrajes</title>
+    <link rel="stylesheet" href="StyleSheet1.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
@@ -23,17 +22,21 @@
             </nav>
         </div>
 
+        <div class="buscador">
+            <input type="text" id="buscador" placeholder="Buscar producto..." oninput="buscar()">
+        </div>
+
         <section class="productos">
             <div class="categorias" id="bisagras">
                 <h2>BISAGRAS</h2>
                 <div class="lista-productos">
-                    <article class="producto">
-                        <img src="imagenes/CIERRESUAVE.webp" alt="1">
+                    <article class="producto" onclick="abrirVentana(this)">
+                        <img src="imagenes/CIERRESUAVE.webp" alt="Bisagra de cierre suave">
                         <h3>Bisagra de cierre suave</h3>
                         <p>Cierre amortiguado para puertas.</p>
                     </article>
-                    <article class="producto">
-                        <img src="imagenes/BISAGRARECTA.webp" alt="2">
+                    <article class="producto" onclick="abrirVentana(this)">
+                        <img src="imagenes/BISAGRARECTA.webp" alt="Bisagra recta">
                         <h3>Bisagra recta</h3>
                         <p>Estándar para cocina y closets.</p>
                     </article>
@@ -43,13 +46,13 @@
             <div class="categorias" id="corredoras">
                 <h2>CORREDORAS</h2>
                 <div class="lista-productos">
-                    <article class="producto">
-                        <img src="imagenes/telescopica.webp" alt="3">
-                        <h3>Corredera telescopica</h3>
+                    <article class="producto" onclick="abrirVentana(this)">
+                        <img src="imagenes/telescopica.webp" alt="Corredora telescópica">
+                        <h3>Corredora telescópica</h3>
                         <p>Extensión total para cajones.</p>
                     </article>
-                    <article class="producto">
-                        <img src="imagenes/corredorasuave.webp" alt="4">
+                    <article class="producto" onclick="abrirVentana(this)">
+                        <img src="imagenes/corredorasuave.webp" alt="Corredora de cierre suave">
                         <h3>Corredora de cierre suave</h3>
                         <p>Cierre silencioso.</p>
                     </article>
@@ -59,13 +62,13 @@
             <div class="categorias" id="herrajes">
                 <h2>HERRAJES</h2>
                 <div class="lista-productos">
-                    <article class="producto">
-                        <img src="imagenes/jaladera.webp" alt="5">
+                    <article class="producto" onclick="abrirVentana(this)">
+                        <img src="imagenes/jaladera.webp" alt="Jaladera de acero">
                         <h3>Jaladera de acero</h3>
                         <p>Para puertas y cajones.</p>
                     </article>
-                    <article class="producto">
-                        <img src="imagenes/escuadra.webp" alt="6">
+                    <article class="producto" onclick="abrirVentana(this)">
+                        <img src="imagenes/escuadra.webp" alt="Escuadra de refuerzo">
                         <h3>Escuadra de refuerzo</h3>
                         <p>Refuerza uniones.</p>
                     </article>
@@ -75,13 +78,13 @@
             <div class="categorias" id="accesorios">
                 <h2>ACCESORIOS</h2>
                 <div class="lista-productos">
-                    <article class="producto">
-                        <img src="imagenes/divisor.webp" alt="Bisagra de cierre suave">
+                    <article class="producto" onclick="abrirVentana(this)">
+                        <img src="imagenes/divisor.webp" alt="Organizador de cubiertos">
                         <h3>Organizador de cubiertos</h3>
                         <p>Divisor para cajones.</p>
                     </article>
-                    <article class="producto">
-                        <img src="imagenes/tope.webp" alt="Bisagra de cierre suave">
+                    <article class="producto" onclick="abrirVentana(this)">
+                        <img src="imagenes/tope.webp" alt="Tope de goma">
                         <h3>Tope de goma</h3>
                         <p>Amortigua el golpe de puertas.</p>
                     </article>
@@ -89,5 +92,18 @@
             </div>
         </section>
     </main>
+
+    <!-- Ventana flotante -->
+    <div class="modal" id="modal">
+        <div class="modal-contenido">
+            <button class="cerrar" onclick="cerrarVentana()">×</button>
+            <img id="modal-imagen" src="" alt="">
+            <h3 id="modal-titulo"></h3>
+            <p id="modal-descripcion"></p>
+            <button class="cotizar" onclick="cotizar()">Cotizar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

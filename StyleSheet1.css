@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Inter', Arial, sans-serif;
     margin: 0;
@@ -48,11 +52,34 @@ h1, h2, h3 {
         transition: background 0.3s ease, color 0.3s ease;
     }
 
-        .menu a:hover {
+        .menu a:focus-visible {
             background: #333;
             color: #fff;
         }
 
+@media (hover: hover) {
+    .menu a:hover {
+        background: #333;
+        color: #fff;
+    }
+}
+
+/* Buscador */
+.buscador {
+    text-align: center;
+    margin: 20px 0 0;
+}
+
+    .buscador input {
+        width: 90%;
+        max-width: 400px;
+        padding: 10px 16px;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        font-family: 'Inter', Arial, sans-serif;
+    }
+
+/* Productos */
 .productos {
     display: grid;
     grid-template-columns: 1fr; /* una categoría por fila */
@@ -65,8 +92,8 @@ h1, h2, h3 {
 }
 
 .categorias {
-    min-width: 0; /* evita que el contenido empuje y junte columnas */
-    scroll-margin-top: 20px; /* al usar el menú, no queda pegado arriba */
+    min-width: 0;
+    scroll-margin-top: 20px;
     display: flex;
     flex-direction: column;
 }
@@ -82,7 +109,7 @@ h1, h2, h3 {
     grid-template-columns: repeat(2, 1fr); /* 2 productos lado a lado */
     gap: 12px;
     flex: 1;
-    grid-auto-rows: 1fr; /* todas las tarjetas de la lista con la misma altura */
+    grid-auto-rows: 1fr;
 }
 
 .producto {
@@ -93,6 +120,7 @@ h1, h2, h3 {
     background: #fff;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -120,8 +148,8 @@ h1, h2, h3 {
         margin: 0;
     }
 
-/*donde hay mouse*/
-@media (hover: hover) { 
+/* donde hay mouse */
+@media (hover: hover) {
     .producto:hover {
         transform: translateY(-6px);
         box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
@@ -132,6 +160,61 @@ h1, h2, h3 {
         }
 }
 
+/* Ventana flotante */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    z-index: 10;
+}
+
+.modal-contenido {
+    position: relative;
+    background: #fff;
+    border-radius: 20px;
+    padding: 24px;
+    max-width: 380px;
+    width: 100%;
+    text-align: center;
+}
+
+    .modal-contenido img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: contain;
+        background: #f6f6f6;
+        border-radius: 12px;
+    }
+
+    .modal-contenido p {
+        color: #777;
+    }
+
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    border: none;
+    background: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.cotizar {
+    border: none;
+    background: #333;
+    color: #fff;
+    padding: 10px 24px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+/* Responsive */
 @media (max-width: 380px) {
     .productos {
         padding: 10px;
@@ -176,12 +259,12 @@ h1, h2, h3 {
 
         .producto h3 {
             font-size: 1.3rem;
-            min-height: 2.6em; /* reserva espacio para 2 líneas */
+            min-height: 2.6em;
         }
 
         .producto p {
             font-size: 0.9rem;
-            margin-top: auto; /* la descripción baja al fondo de la tarjeta */
+            margin-top: auto;
         }
 
         .producto img {
@@ -191,9 +274,15 @@ h1, h2, h3 {
 
 @media (min-width: 901px) {
     .productos {
-        grid-template-columns: repeat(4, 1fr);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 24px;
-        align-items: stretch; /* antes: start */
+        padding: 20px;
+    }
+
+    .categorias {
+        width: calc(25% - 18px); /* 4 por fila */
     }
 
     .lista-productos {
@@ -206,5 +295,8 @@ h1, h2, h3 {
         max-width: 1350px;
         gap: 40px;
     }
+
+    .categorias {
+        width: calc(25% - 30px);
+    }
 }
-    
