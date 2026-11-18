@@ -1,30 +1,64 @@
-
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Importaciones EMMALUX - bisagras, corredoras, herrajes y accesorios para muebles.">
+    <meta name="author" content="Equipo Taller Web 2.0">
 
     <title>Importaciones EMMALUX</title>
 
+    <link rel="icon" href="imagenes/emmalux.svg">
+
+    <!-- fuentes e iconos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+
+    <!-- estilos -->
+    <link rel="stylesheet" href="Header/header.css">
     <link rel="stylesheet" href="Nosotros/nosotros.css">
     <link rel="stylesheet" href="StyleSheet1.css">
     <link rel="stylesheet" href="Tercera-seccion/style.css">
     <link rel="stylesheet" href="FooterEs.css">
     <link rel="stylesheet" href="integracion.css">
 
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-
+    <!-- scripts -->
+    <script src="Header/header.js" defer></script>
     <script src="Nosotros/nosotros.js" defer></script>
     <script src="script.js" defer></script>
     <script src="Tercera-seccion/script.js" defer></script>
 </head>
 
 <body>
+
+    <header class="header">
+        <div class="header-contenedor">
+            <a href="#nosotros" class="logo">
+                <img src="imagenes/emmalux.svg" alt="Logo EMMALUX">
+            </a>
+
+            <button class="menu-toggle" aria-expanded="false" aria-label="Abrir menú">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="nav-menu">
+                <a href="#nosotros">Nosotros</a>
+                <a href="#catalogo">Catálogo</a>
+                <a href="#asesoria-emmalux">Asesoría</a>
+                <a href="#opinion">Opinión</a>
+                <a href="https://api.whatsapp.com/send?phone=%2B51933155780" class="btn-cotizar"
+                    target="_blank">Cotizar</a>
+            </nav>
+        </div>
+    </header>
 
     <div id="mensajeBienvenida" class="mensaje">
         <div class="mensaje-contenido">
@@ -47,13 +81,16 @@
 
             <div class="nosotros-contenido">
                 <h3>Importaciones EMMALUX</h3>
-                <p>Somos una empresa dedicada a la importación y distribución de accesorios y materiales para la creación de muebles y proyectos de decoración.</p>
+                <p>Somos una empresa dedicada a la importación y distribución de accesorios y materiales para la
+                    creación de muebles y proyectos de decoración.</p>
 
                 <h3>Nuestra visión</h3>
-                <p>Ofrecemos productos como bisagras, correderas, tornillos, tapacantos, luminarias, entre otros, con la finalidad de brindar soluciones integrales a nuestros clientes.</p>
+                <p>Ofrecemos productos como bisagras, correderas, tornillos, tapacantos, luminarias, entre otros, con la
+                    finalidad de brindar soluciones integrales a nuestros clientes.</p>
 
                 <h3>Nuestra misión</h3>
-                <p>Ser una empresa reconocida en el mercado nacional por la calidad de nuestros productos y por el compromiso con nuestros clientes.</p>
+                <p>Ser una empresa reconocida en el mercado nacional por la calidad de nuestros productos y por el
+                    compromiso con nuestros clientes.</p>
             </div>
 
         </div>
@@ -151,9 +188,11 @@
             </section>
         </section>
 
+
         <section id="asesoria-emmalux" class="asesoria-seccion">
 
             <div class="asesoria-contenedor">
+
                 <div class="asesoria-encabezado">
                     <span class="asesoria-etiqueta">ATENCIÓN PERSONALIZADA</span>
 
@@ -164,13 +203,14 @@
                         adecuados para tus muebles y proyectos.
                     </p>
                 </div>
+
             </div>
 
             <div class="asesoria-productos">
 
                 <article class="asesoria-tarjeta">
                     <div class="asesoria-imagen">
-                        <span>01</span>
+                        <img src="Tercera-seccion/imagenes-vectoriales/bisagras.svg" alt="Bisagras para muebles">
                     </div>
 
                     <h3>Bisagras</h3>
@@ -187,7 +227,7 @@
 
                 <article class="asesoria-tarjeta">
                     <div class="asesoria-imagen">
-                        <span>02</span>
+                        <img src="Tercera-seccion/imagenes-vectoriales/corredora.svg" alt="Correderas para muebles">
                     </div>
 
                     <h3>Correderas</h3>
@@ -204,7 +244,7 @@
 
                 <article class="asesoria-tarjeta">
                     <div class="asesoria-imagen">
-                        <span>03</span>
+                        <img src="Tercera-seccion/imagenes-vectoriales/cierre.svg" alt="Herrajes para muebles">
                     </div>
 
                     <h3>Manijas y herrajes</h3>
@@ -220,6 +260,41 @@
 
             </div>
 
+            <div class="asesoria-recomendacion">
+
+                <h3>¿No sabes qué producto necesitas?</h3>
+
+                <p>
+                    Selecciona la parte de tu mueble que deseas mejorar
+                    y te mostraremos una recomendación.
+                </p>
+
+                <form id="asesoria-formulario">
+
+                    <label for="asesoria-necesidad">
+                        ¿Qué parte de tu mueble necesitas mejorar?
+                    </label>
+
+                    <select id="asesoria-necesidad" required>
+                        <option value="">Selecciona una opción</option>
+                        <option value="puerta">Puertas</option>
+                        <option value="cajon">Cajones</option>
+                        <option value="acabado">Acabados</option>
+                    </select>
+
+                    <button type="submit" class="asesoria-boton">
+                        Ver recomendación
+                    </button>
+
+                </form>
+
+                <div id="asesoria-resultado">
+                    <img id="asesoria-imagen-resultado" src="" alt="Producto recomendado">
+                    <p id="asesoria-texto-resultado"></p>
+                </div>
+
+            </div>
+
         </section>
 
     </main>
@@ -231,6 +306,78 @@
             <h3 id="modal-titulo"></h3>
             <p id="modal-descripcion"></p>
             <button class="cotizar" onclick="cotizar()">Cotizar</button>
+        </div>
+    </div>
+
+    <section id="opinion" class="opinion-seccion">
+        <div class="opinion-contenedor">
+
+            <div class="opinion-encabezado">
+                <span class="opinion-etiqueta">TU OPINIÓN IMPORTA</span>
+                <h2>Ayúdanos a mejorar</h2>
+                <p>Cuéntanos cómo fue tu experiencia en nuestra página.</p>
+            </div>
+
+            <form id="formOpinion" class="opinion-formulario" novalidate>
+
+                <div class="opinion-fila">
+                    <div class="opinion-campo">
+                        <label for="opNombre">Nombre</label>
+                        <input type="text" id="opNombre" placeholder="Tu nombre">
+                        <small class="opinion-error" id="errNombre"></small>
+                    </div>
+
+                    <div class="opinion-campo">
+                        <label for="opCorreo">Correo electrónico</label>
+                        <input type="email" id="opCorreo" placeholder="tucorreo@ejemplo.com">
+                        <small class="opinion-error" id="errCorreo"></small>
+                    </div>
+                </div>
+
+                <div class="opinion-fila">
+                    <div class="opinion-campo">
+                        <label for="opCalificacion">¿Cómo calificas tu experiencia?</label>
+                        <select id="opCalificacion">
+                            <option value="">Selecciona una opción</option>
+                            <option value="5">5 - Excelente</option>
+                            <option value="4">4 - Muy buena</option>
+                            <option value="3">3 - Regular</option>
+                            <option value="2">2 - Mala</option>
+                            <option value="1">1 - Muy mala</option>
+                        </select>
+                        <small class="opinion-error" id="errCalificacion"></small>
+                    </div>
+
+                    <div class="opinion-campo">
+                        <label for="opTema">¿Sobre qué quieres opinar?</label>
+                        <select id="opTema">
+                            <option value="">Selecciona un tema</option>
+                            <option value="catalogo">Catálogo de productos</option>
+                            <option value="buscador">Buscador</option>
+                            <option value="diseno">Diseño de la página</option>
+                            <option value="atencion">Atención y cotización</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                        <small class="opinion-error" id="errTema"></small>
+                    </div>
+                </div>
+
+                <div class="opinion-campo">
+                    <label for="opComentario">Tu comentario</label>
+                    <textarea id="opComentario" rows="4" placeholder="¿Qué podemos mejorar?"></textarea>
+                    <small class="opinion-error" id="errComentario"></small>
+                </div>
+
+                <button type="submit" class="opinion-boton">Enviar opinión</button>
+            </form>
+        </div>
+    </section>
+
+    <div class="opinion-aviso" id="opinionAviso" hidden>
+        <div class="opinion-aviso-caja">
+            <h3>¡Gracias por tus comentarios!</h3>
+            <p id="opinionAvisoTexto">Tu opinión nos ayuda a mejorar.</p>
+            <button type="button" class="opinion-boton" id="opinionAvisoCerrar">Cerrar</button>
         </div>
     </div>
 
@@ -252,14 +399,17 @@
         <div class="footer-section">
             <h3>Redes Sociales</h3>
             <ul class="social-icons">
-                <li><a href="https://web.facebook.com/importacionesemmalux/?rdid=RXMlAUIjsPzwjsr8"><i class="bx bxl-facebook-circle"></i></a></li>
-                <li><a href="https://api.whatsapp.com/send?phone=%2B51933155780"><i class="bx bxl-whatsapp"></i></a></li>
-                <li><a href="https://www.tiktok.com/@importaciones.emmalux?is_from_webapp=1&sender_device=pc"><i class="bx bxl-tiktok"></i></a></li>
+                <li><a href="https://web.facebook.com/importacionesemmalux/?rdid=RXMlAUIjsPzwjsr8"><i
+                            class="bx bxl-facebook-circle"></i></a></li>
+                <li><a href="https://api.whatsapp.com/send?phone=%2B51933155780"><i class="bx bxl-whatsapp"></i></a>
+                </li>
+                <li><a href="https://www.tiktok.com/@importaciones.emmalux?is_from_webapp=1&sender_device=pc"><i
+                            class="bx bxl-tiktok"></i></a></li>
             </ul>
 
             <p class="copy-message">Importaciones EMMALUX &copy; 2026 - Todos los derechos reservados.</p>
         </div>
     </footer>
-
 </body>
+
 </html>
