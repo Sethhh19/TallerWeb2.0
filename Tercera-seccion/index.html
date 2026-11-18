@@ -85,9 +85,39 @@
 
         </div>
 
+        <div class="asesoria-recomendacion">
+
+            <h3>¿No sabes qué producto necesitas?</h3>
+
+            <p>
+                Selecciona la parte de tu mueble que deseas mejorar
+                y te mostraremos una recomendación.
+            </p>
+
+            <form id="asesoria-formulario">
+
+                <label for="asesoria-necesidad">
+                    ¿Qué parte de tu mueble necesitas mejorar?
+                </label>
+
+                <select id="asesoria-necesidad" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="puerta">Puertas</option>
+                    <option value="cajon">Cajones</option>
+                    <option value="acabado">Acabados</option>
+                </select>
+
+                <button type="submit" class="asesoria-boton">
+                    Ver recomendación
+                </button>
+
+            </form>
+
+            <div id="asesoria-resultado"></div>
+
+        </div>
+
     </section>
-
-
 </body>
 
 </html>
