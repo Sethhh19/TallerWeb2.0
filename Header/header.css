@@ -1,0 +1,231 @@
+/* =========================================================
+   HEADER + MENÚ HAMBURGUESA RESPONSIVO (Semana 14)
+   Rama: Head  |  Importaciones EMMALUX
+   ========================================================= */
+
+:root {
+    --hd-alto: 70px;
+    --hd-fondo: #ffffff;
+    --hd-texto: #24262b;
+    --hd-acento: #8c1212;        /* mismo rojo de Nosotros y Opinión */
+    --hd-acento-hover: #6d0e0e;
+}
+
+/* ---------- Barra superior (sticky) ---------- */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;                 /* modales usan 999/1000, quedan encima */
+    width: 100%;
+    background: var(--hd-fondo);
+    border-bottom: 1px solid #eeeeee;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Sombra cuando el usuario hace scroll (la agrega header.js) */
+.site-header.con-sombra {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.header-contenedor {
+    max-width: 1200px;
+    height: var(--hd-alto);
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;                 /* Flexbox 1D (Semana 9) */
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* ---------- Logo ---------- */
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--hd-texto);
+}
+
+.header-logo img {
+    /* el SVG es cuadrado con mucho espacio vacío:
+       object-fit: cover recorta solo la franja central donde está el logo */
+    width: 170px;
+    height: 46px;
+    object-fit: cover;
+}
+
+/* ---------- Navegación (escritorio) ---------- */
+.nav-principal ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav-principal a {
+    display: block;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--hd-texto);
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.nav-principal a:hover,
+.nav-principal a:focus-visible,
+.nav-principal a.activo {
+    background: var(--hd-acento);
+    color: #ffffff;
+}
+
+/* Botón destacado de WhatsApp */
+.nav-principal a.nav-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--hd-acento);
+    color: #ffffff;
+}
+
+.nav-principal a.nav-cta:hover {
+    background: var(--hd-acento-hover);
+}
+
+.nav-principal a.nav-cta i {
+    font-size: 1.15rem;
+}
+
+/* ---------- Botón hamburguesa (oculto en escritorio) ---------- */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    background: none;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.menu-toggle:focus-visible {
+    outline: 2px solid var(--hd-acento);
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: var(--hd-texto);
+    border-radius: 3px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Las 3 barras se convierten en una X (Semana 14) */
+.menu-toggle[aria-expanded="true"] .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle[aria-expanded="true"] .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle[aria-expanded="true"] .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Fondo oscuro detrás del menú en celular */
+.menu-backdrop {
+    position: fixed;
+    inset: var(--hd-alto) 0 0 0;
+    z-index: 90;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.menu-backdrop.is-visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Al saltar con un enlace, que el título no quede tapado por el header */
+section[id] {
+    scroll-margin-top: calc(var(--hd-alto) + 10px);
+}
+
+/* ---------- Tablet y celular (Semana 8: media queries) ---------- */
+@media (max-width: 900px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Menú tipo "drawer" que entra desde la derecha */
+    .nav-principal {
+        position: fixed;
+        top: var(--hd-alto);
+        right: 0;
+        z-index: 95;
+        width: min(280px, 80vw);
+        height: calc(100vh - var(--hd-alto));
+        padding: 24px 18px;
+        background: var(--hd-fondo);
+        box-shadow: -6px 0 18px rgba(0, 0, 0, 0.12);
+        overflow-y: auto;
+        transform: translateX(100%);          /* oculto fuera de pantalla */
+        transition: transform 0.3s ease;      /* animación con GPU, 60 FPS */
+        visibility: hidden;
+    }
+
+    .nav-principal.is-active {
+        transform: translateX(0);             /* visible */
+        visibility: visible;
+    }
+
+    .nav-principal ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+
+    .nav-principal a {
+        padding: 12px 16px;
+        border-radius: 10px;
+        font-size: 1rem;
+    }
+
+    .nav-principal a.nav-cta {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --hd-alto: 60px;
+    }
+
+    .header-logo img {
+        width: 140px;
+        height: 38px;
+    }
+}
+
+/* Respeta a usuarios que desactivan animaciones */
+@media (prefers-reduced-motion: reduce) {
+    .nav-principal,
+    .menu-toggle .bar,
+    .menu-backdrop {
+        transition: none;
+    }
+}
