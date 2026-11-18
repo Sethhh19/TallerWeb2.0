@@ -1,0 +1,66 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    flex: 1;
+}
+
+#catalogo {
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+#catalogo h1,
+#catalogo h2,
+#catalogo h3 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+#nosotros h2,
+#nosotros h3,
+.asesoria-seccion h2,
+.asesoria-seccion h3,
+footer h3 {
+    font-family: Arial, sans-serif;
+}
+
+.nosotros {
+    width: 100%;
+}
+
+.asesoria-seccion {
+    width: 100%;
+}
+
+footer {
+    width: 100%;
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    .nosotros {
+        padding: 45px 16px;
+    }
+
+    .nosotros-contenido {
+        padding: 25px 20px;
+    }
+
+    .mensaje-contenido {
+        width: calc(100% - 36px);
+        max-width: 350px;
+    }
+}
