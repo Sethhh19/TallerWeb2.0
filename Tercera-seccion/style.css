@@ -199,3 +199,11 @@
         padding: 18px 14px;
     }
 }
+
+.asesoria-imagen img {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    object-fit: contain;
+    display: block;
+}
