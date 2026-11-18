@@ -120,3 +120,82 @@
     background: #b17a35;
     transform: scale(1.04);
 }
+
+@media (max-width: 1000px) {
+    .asesoria-seccion {
+        padding: 55px 20px;
+    }
+
+    .asesoria-productos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .asesoria-tarjeta {
+        padding: 24px 18px;
+    }
+
+    .asesoria-encabezado h2 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    .asesoria-seccion {
+        padding: 40px 16px;
+    }
+
+    .asesoria-encabezado {
+        margin-bottom: 30px;
+    }
+
+    .asesoria-encabezado h2 {
+        font-size: 25px;
+    }
+
+    .asesoria-encabezado p {
+        font-size: 14px;
+    }
+
+    .asesoria-productos {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+        gap: 18px;
+    }
+
+    .asesoria-tarjeta {
+        padding: 22px 18px;
+    }
+
+    .asesoria-imagen {
+        height: 140px;
+    }
+
+    .asesoria-tarjeta h3 {
+        font-size: 20px;
+    }
+
+    .asesoria-tarjeta p {
+        min-height: auto;
+        font-size: 14px;
+    }
+
+    .asesoria-boton {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 380px) {
+    .asesoria-seccion {
+        padding: 35px 12px;
+    }
+
+    .asesoria-encabezado h2 {
+        font-size: 22px;
+    }
+
+    .asesoria-tarjeta {
+        padding: 18px 14px;
+    }
+}
