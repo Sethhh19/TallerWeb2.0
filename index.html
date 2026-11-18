@@ -4,27 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Importaciones EMMALUX - bisagras, corredoras, herrajes y accesorios para muebles.">
+    <meta name="author" content="Equipo Taller Web 2.0">
 
     <title>Importaciones EMMALUX</title>
 
+    <link rel="icon" href="imagenes/emmalux.svg">
+
+    <!-- fuentes e iconos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+
+    <!-- estilos -->
+    <link rel="stylesheet" href="Header/header.css">
     <link rel="stylesheet" href="Nosotros/nosotros.css">
     <link rel="stylesheet" href="StyleSheet1.css">
     <link rel="stylesheet" href="Tercera-seccion/style.css">
     <link rel="stylesheet" href="FooterEs.css">
     <link rel="stylesheet" href="integracion.css">
 
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-
+    <!-- scripts -->
+    <script src="Header/header.js" defer></script>
     <script src="Nosotros/nosotros.js" defer></script>
     <script src="script.js" defer></script>
     <script src="Tercera-seccion/script.js" defer></script>
 </head>
 
 <body>
+
+    <header class="header">
+        <div class="header-contenedor">
+            <a href="#nosotros" class="logo">
+                <img src="imagenes/emmalux.svg" alt="Logo EMMALUX">
+            </a>
+
+            <button class="menu-toggle" aria-expanded="false" aria-label="Abrir menú">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="nav-menu">
+                <a href="#nosotros">Nosotros</a>
+                <a href="#catalogo">Catálogo</a>
+                <a href="#asesoria-emmalux">Asesoría</a>
+                <a href="#opinion">Opinión</a>
+                <a href="https://api.whatsapp.com/send?phone=%2B51933155780" class="btn-cotizar" target="_blank">Cotizar</a>
+            </nav>
+        </div>
+    </header>
 
     <div id="mensajeBienvenida" class="mensaje">
         <div class="mensaje-contenido">
