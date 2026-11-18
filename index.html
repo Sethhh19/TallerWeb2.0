@@ -1,0 +1,336 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Importaciones EMMALUX</title>
+
+    <link rel="stylesheet" href="Nosotros/nosotros.css">
+    <link rel="stylesheet" href="StyleSheet1.css">
+    <link rel="stylesheet" href="Tercera-seccion/style.css">
+    <link rel="stylesheet" href="FooterEs.css">
+    <link rel="stylesheet" href="integracion.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+    <script src="Nosotros/nosotros.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="Tercera-seccion/script.js" defer></script>
+</head>
+
+<body>
+
+    <div id="mensajeBienvenida" class="mensaje">
+        <div class="mensaje-contenido">
+            <h2>¡Bienvenido a EMMALUX!</h2>
+            <p>
+                Conoce nuestros productos y soluciones
+                para tus proyectos de muebles y decoración.
+            </p>
+            <button id="btnAceptar">Aceptar</button>
+        </div>
+    </div>
+
+    <section id="nosotros" class="nosotros">
+        <div class="contenedor">
+
+            <div class="titulo-seccion">
+                <p>CONOCE NUESTRA EMPRESA</p>
+                <h2>SOBRE NOSOTROS</h2>
+            </div>
+
+            <div class="nosotros-contenido">
+                <h3>Importaciones EMMALUX</h3>
+                <p>Somos una empresa dedicada a la importación y distribución de accesorios y materiales para la creación de muebles y proyectos de decoración.</p>
+
+                <h3>Nuestra visión</h3>
+                <p>Ofrecemos productos como bisagras, correderas, tornillos, tapacantos, luminarias, entre otros, con la finalidad de brindar soluciones integrales a nuestros clientes.</p>
+
+                <h3>Nuestra misión</h3>
+                <p>Ser una empresa reconocida en el mercado nacional por la calidad de nuestros productos y por el compromiso con nuestros clientes.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <main>
+
+        <section id="catalogo">
+            <div class="encabezado">
+                <h1>Nuestro Catálogo</h1>
+                <p class="subtitulo">Categorías Principales</p>
+
+                <nav class="menu">
+                    <a href="#bisagras">Bisagras</a>
+                    <a href="#corredoras">Corredoras</a>
+                    <a href="#herrajes">Herrajes</a>
+                    <a href="#accesorios">Accesorios</a>
+                </nav>
+            </div>
+
+            <div class="buscador">
+                <input type="text" id="buscador" placeholder="Buscar producto..." oninput="buscar()">
+            </div>
+
+            <section class="productos">
+
+                <div class="categorias" id="bisagras">
+                    <h2>BISAGRAS</h2>
+                    <div class="lista-productos">
+                        <article class="producto" onclick="abrirVentana(this)">
+                            <img src="imagenes/CIERRESUAVE.webp" alt="Bisagra de cierre suave">
+                            <h3>Bisagra de cierre suave</h3>
+                            <p>Cierre amortiguado para puertas.</p>
+                        </article>
+
+                        <article class="producto" onclick="abrirVentana(this)">
+                            <img src="imagenes/BISAGRARECTA.webp" alt="Bisagra recta">
+                            <h3>Bisagra recta</h3>
+                            <p>Estándar para cocina y closets.</p>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="categorias" id="corredoras">
+                    <h2>CORREDORAS</h2>
+                    <div class="lista-productos">
+                        <article class="producto" onclick="abrirVentana(this)">
+                            <img src="imagenes/telescopica.webp" alt="Corredora telescópica">
+                            <h3>Corredora telescópica</h3>
+                            <p>Extensión total para cajones.</p>
+                        </article>
+
+                        <article class="producto" onclick="abrirVentana(this)">
+                            <img src="imagenes/corredorasuave.webp" alt="Corredora de cierre suave">
+                            <h3>Corredora de cierre suave</h3>
+                            <p>Cierre silencioso.</p>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="categorias" id="herrajes">
+                    <h2>HERRAJES</h2>
+                    <div class="lista-productos">
+                        <article class="producto" onclick="abrirVentana(this)">
+                            <img src="imagenes/jaladera.webp" alt="Jaladera de acero">
+                            <h3>Jaladera de acero</h3>
+                            <p>Para puertas y cajones.</p>
+                        </article>
+
+                        <article class="producto" onclick="abrirVentana(this)">
+                            <img src="imagenes/escuadra.webp" alt="Escuadra de refuerzo">
+                            <h3>Escuadra de refuerzo</h3>
+                            <p>Refuerza uniones.</p>
+                        </article>
+                    </div>
+                </div>
+
+                <div class="categorias" id="accesorios">
+                    <h2>ACCESORIOS</h2>
+                    <div class="lista-productos">
+                        <article class="producto" onclick="abrirVentana(this)">
+                            <img src="imagenes/divisor.webp" alt="Organizador de cubiertos">
+                            <h3>Organizador de cubiertos</h3>
+                            <p>Divisor para cajones.</p>
+                        </article>
+
+                        <article class="producto" onclick="abrirVentana(this)">
+                            <img src="imagenes/tope.webp" alt="Tope de goma">
+                            <h3>Tope de goma</h3>
+                            <p>Amortigua el golpe de puertas.</p>
+                        </article>
+                    </div>
+                </div>
+
+            </section>
+        </section>
+
+        <section id="asesoria-emmalux" class="asesoria-seccion">
+
+            <div class="asesoria-contenedor">
+                <div class="asesoria-encabezado">
+                    <span class="asesoria-etiqueta">ATENCIÓN PERSONALIZADA</span>
+
+                    <h2>¿Necesitas ayuda para elegir tus productos?</h2>
+
+                    <p>
+                        Te ayudamos a encontrar los herrajes y accesorios
+                        adecuados para tus muebles y proyectos.
+                    </p>
+                </div>
+            </div>
+
+            <div class="asesoria-productos">
+
+                <article class="asesoria-tarjeta">
+                    <div class="asesoria-imagen">
+                        <span>01</span>
+                    </div>
+
+                    <h3>Bisagras</h3>
+
+                    <p>
+                        Soluciones para la apertura y cierre
+                        de puertas de muebles.
+                    </p>
+
+                    <button class="asesoria-boton" type="button">
+                        Consultar producto
+                    </button>
+                </article>
+
+                <article class="asesoria-tarjeta">
+                    <div class="asesoria-imagen">
+                        <span>02</span>
+                    </div>
+
+                    <h3>Correderas</h3>
+
+                    <p>
+                        Sistemas para el desplazamiento
+                        suave de cajones.
+                    </p>
+
+                    <button class="asesoria-boton" type="button">
+                        Consultar producto
+                    </button>
+                </article>
+
+                <article class="asesoria-tarjeta">
+                    <div class="asesoria-imagen">
+                        <span>03</span>
+                    </div>
+
+                    <h3>Manijas y herrajes</h3>
+
+                    <p>
+                        Dale un mejor acabado a tus muebles con nuestros accesorios.
+                    </p>
+
+                    <button class="asesoria-boton" type="button">
+                        Consultar producto
+                    </button>
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <div class="modal" id="modal">
+        <div class="modal-contenido">
+            <button class="cerrar" onclick="cerrarVentana()">×</button>
+            <img id="modal-imagen" src="" alt="">
+            <h3 id="modal-titulo"></h3>
+            <p id="modal-descripcion"></p>
+            <button class="cotizar" onclick="cotizar()">Cotizar</button>
+        </div>
+    </div>
+
+    <section id="opinion" class="opinion-seccion">
+        <div class="opinion-contenedor">
+
+            <div class="opinion-encabezado">
+                <span class="opinion-etiqueta">TU OPINIÓN IMPORTA</span>
+                <h2>Ayúdanos a mejorar</h2>
+                <p>Cuéntanos cómo fue tu experiencia en nuestra página.</p>
+            </div>
+
+            <form id="formOpinion" class="opinion-formulario" novalidate>
+
+                <div class="opinion-fila">
+                    <div class="opinion-campo">
+                        <label for="opNombre">Nombre</label>
+                        <input type="text" id="opNombre" placeholder="Tu nombre">
+                        <small class="opinion-error" id="errNombre"></small>
+                    </div>
+
+                    <div class="opinion-campo">
+                        <label for="opCorreo">Correo electrónico</label>
+                        <input type="email" id="opCorreo" placeholder="tucorreo@ejemplo.com">
+                        <small class="opinion-error" id="errCorreo"></small>
+                    </div>
+                </div>
+
+                <div class="opinion-fila">
+                    <div class="opinion-campo">
+                        <label for="opCalificacion">¿Cómo calificas tu experiencia?</label>
+                        <select id="opCalificacion">
+                            <option value="">Selecciona una opción</option>
+                            <option value="5">5 - Excelente</option>
+                            <option value="4">4 - Muy buena</option>
+                            <option value="3">3 - Regular</option>
+                            <option value="2">2 - Mala</option>
+                            <option value="1">1 - Muy mala</option>
+                        </select>
+                        <small class="opinion-error" id="errCalificacion"></small>
+                    </div>
+
+                    <div class="opinion-campo">
+                        <label for="opTema">¿Sobre qué quieres opinar?</label>
+                        <select id="opTema">
+                            <option value="">Selecciona un tema</option>
+                            <option value="catalogo">Catálogo de productos</option>
+                            <option value="buscador">Buscador</option>
+                            <option value="diseno">Diseño de la página</option>
+                            <option value="atencion">Atención y cotización</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                        <small class="opinion-error" id="errTema"></small>
+                    </div>
+                </div>
+
+                <div class="opinion-campo">
+                    <label for="opComentario">Tu comentario</label>
+                    <textarea id="opComentario" rows="4" placeholder="¿Qué podemos mejorar?"></textarea>
+                    <small class="opinion-error" id="errComentario"></small>
+                </div>
+
+                <button type="submit" class="opinion-boton">Enviar opinión</button>
+            </form>
+        </div>
+    </section>
+
+    <div class="opinion-aviso" id="opinionAviso" hidden>
+        <div class="opinion-aviso-caja">
+            <h3>¡Gracias por tus comentarios!</h3>
+            <p id="opinionAvisoTexto">Tu opinión nos ayuda a mejorar.</p>
+            <button type="button" class="opinion-boton" id="opinionAvisoCerrar">Cerrar</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="image">
+            <a href="#">
+                <img src="imagenes/emmalux.svg" alt="Logo Importaciones EMMALUX">
+            </a>
+        </div>
+
+        <div class="footer-section">
+            <h3>Legales</h3>
+            <ul>
+                <li><a href="#">Políticas de privacidad</a></li>
+                <li><a href="#">Términos y condiciones</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h3>Redes Sociales</h3>
+            <ul class="social-icons">
+                <li><a href="https://web.facebook.com/importacionesemmalux/?rdid=RXMlAUIjsPzwjsr8"><i class="bx bxl-facebook-circle"></i></a></li>
+                <li><a href="https://api.whatsapp.com/send?phone=%2B51933155780"><i class="bx bxl-whatsapp"></i></a></li>
+                <li><a href="https://www.tiktok.com/@importaciones.emmalux?is_from_webapp=1&sender_device=pc"><i class="bx bxl-tiktok"></i></a></li>
+            </ul>
+
+            <p class="copy-message">Importaciones EMMALUX &copy; 2026 - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
