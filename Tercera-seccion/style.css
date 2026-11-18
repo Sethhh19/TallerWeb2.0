@@ -102,3 +102,21 @@
     font-weight: bold;
     cursor: pointer;
 }
+
+.asesoria-tarjeta {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.asesoria-tarjeta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(25, 38, 55, 0.12);
+}
+
+.asesoria-boton {
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.asesoria-boton:hover {
+    background: #b17a35;
+    transform: scale(1.04);
+}
