@@ -55,3 +55,79 @@ function cotizar() {
         alert("Gracias " + nombre + ", te contactaremos pronto.");
     }
 }
+
+(function () {
+    const form = document.getElementById("formOpinion");
+    const aviso = document.getElementById("opinionAviso");
+    const avisoTexto = document.getElementById("opinionAvisoTexto");
+    const btnCerrar = document.getElementById("opinionAvisoCerrar");
+
+    if (!form || !aviso) return;
+
+    const reglas = [
+        { id: "opNombre", error: "errNombre", mensaje: "Escribe tu nombre.",
+            valida: v => v.trim().length >= 2 },
+        { id: "opCorreo", error: "errCorreo", mensaje: "Escribe un correo válido.",
+            valida: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) },
+        { id: "opCalificacion", error: "errCalificacion", mensaje: "Elige una calificación.",
+            valida: v => v !== "" },
+        { id: "opTema", error: "errTema", mensaje: "Elige un tema.",
+            valida: v => v !== "" },
+        { id: "opComentario", error: "errComentario", mensaje: "Cuéntanos un poco más (mínimo 10 caracteres).",
+            valida: v => v.trim().length >= 10 }
+    ];
+
+    function validar() {
+        let todoBien = true;
+
+        reglas.forEach(function (r) {
+            const campo = document.getElementById(r.id);
+            const error = document.getElementById(r.error);
+
+            if (r.valida(campo.value)) {
+                error.textContent = "";
+                campo.classList.remove("opinion-invalido");
+            } else {
+                error.textContent = r.mensaje;
+                campo.classList.add("opinion-invalido");
+                todoBien = false;
+            }
+        });
+
+        return todoBien;
+    }
+
+    function abrirAviso(nombre) {
+        avisoTexto.textContent = "Gracias, " + nombre + ". Tu opinión nos ayuda a mejorar.";
+        aviso.hidden = false;
+    }
+
+    function cerrarAviso() {
+        aviso.hidden = true;
+    }
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault(); // evita que la página se recargue
+
+        if (!validar()) return;
+
+        const nombre = document.getElementById("opNombre").value.trim();
+        abrirAviso(nombre);
+        form.reset();
+    });
+
+    reglas.forEach(function (r) {
+        document.getElementById(r.id).addEventListener("input", function () {
+            document.getElementById(r.error).textContent = "";
+            this.classList.remove("opinion-invalido");
+        });
+    });
+
+    btnCerrar.addEventListener("click", cerrarAviso);
+    aviso.addEventListener("click", function (e) {
+        if (e.target === aviso) cerrarAviso(); // clic fuera de la caja
+    });
+    document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") cerrarAviso();
+    });
+})();
