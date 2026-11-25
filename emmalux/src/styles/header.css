@@ -1,0 +1,125 @@
+/* header */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.header-contenedor {
+    max-width: 1200px;
+    height: 70px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 170px;
+    height: 46px;
+    object-fit: cover;
+}
+
+/* menu */
+.nav-menu {
+    display: flex;
+    gap: 6px;
+}
+
+.nav-menu a {
+    padding: 8px 14px;
+    border-radius: 20px;
+    color: #24262b;
+    text-decoration: none;
+    font-family: 'Inter', Arial, sans-serif;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    background-color: #8c1212;
+    color: #ffffff;
+}
+
+.nav-menu .btn-cotizar {
+    background-color: #8c1212;
+    color: #ffffff;
+}
+
+.nav-menu .btn-cotizar:hover {
+    background-color: #6d0e0e;
+}
+
+/* boton hamburguesa */
+.menu-toggle {
+    display: none;
+    padding: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 26px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: #24262b;
+    border-radius: 3px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* las barras forman una X */
+.menu-toggle.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.is-active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* para que el header no tape los titulos */
+section {
+    scroll-margin-top: 80px;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        right: 0;
+        width: 250px;
+        height: 100vh;
+        padding: 20px;
+        flex-direction: column;
+        background-color: #ffffff;
+        box-shadow: -4px 0 12px rgba(0, 0, 0, 0.1);
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+    }
+
+    .nav-menu.is-active {
+        transform: translateX(0);
+    }
+
+    .nav-menu a {
+        padding: 12px 16px;
+        border-radius: 8px;
+    }
+
+    .logo img {
+        width: 140px;
+        height: 38px;
+    }
+}

@@ -1,0 +1,311 @@
+.asesoria-seccion {
+    width: 100%;
+    padding: 70px 25px;
+    background: #f5f6f8;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.asesoria-seccion * {
+    box-sizing: border-box;
+}
+
+.asesoria-contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.asesoria-encabezado {
+    max-width: 750px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.asesoria-etiqueta {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #b17a35;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.asesoria-encabezado h2 {
+    margin: 0 0 18px;
+    color: #202b3c;
+    font-size: 34px;
+    line-height: 1.3;
+}
+
+.asesoria-encabezado p {
+    margin: 0;
+    color: #687386;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.asesoria-productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.asesoria-tarjeta {
+    padding: 28px 24px;
+    background: #ffffff;
+    border: 1px solid #e5e8ed;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(25, 38, 55, 0.06);
+    text-align: center;
+}
+
+.asesoria-imagen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 150px;
+    margin-bottom: 22px;
+    background: #edf0f4;
+    border-radius: 10px;
+}
+
+.asesoria-imagen span {
+    color: #b17a35;
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.asesoria-tarjeta h3 {
+    margin: 0 0 12px;
+    color: #202b3c;
+    font-size: 21px;
+}
+
+.asesoria-tarjeta p {
+    min-height: 55px;
+    margin: 0 0 22px;
+    color: #687386;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.asesoria-boton {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 7px;
+    background: #202b3c;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.asesoria-tarjeta {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.asesoria-tarjeta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(25, 38, 55, 0.12);
+}
+
+.asesoria-boton {
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.asesoria-boton:hover {
+    background: #b17a35;
+    transform: scale(1.04);
+}
+
+@media (max-width: 1000px) {
+    .asesoria-seccion {
+        padding: 55px 20px;
+    }
+
+    .asesoria-productos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .asesoria-tarjeta {
+        width: calc(50% - 10px);
+    }
+
+}
+
+.asesoria-tarjeta {
+    padding: 24px 18px;
+}
+
+.asesoria-encabezado h2 {
+    font-size: 30px;
+}
+
+@media (max-width: 600px) {
+    .asesoria-seccion {
+        padding: 40px 16px;
+    }
+
+    .asesoria-encabezado {
+        margin-bottom: 30px;
+    }
+
+    .asesoria-encabezado h2 {
+        font-size: 25px;
+    }
+
+    .asesoria-encabezado p {
+        font-size: 14px;
+    }
+
+    .asesoria-productos {
+        display: flex;
+        flex-direction: column;
+        max-width: 420px;
+        gap: 18px;
+    }
+
+    .asesoria-tarjeta {
+        width: 100%;
+    }
+
+    .asesoria-tarjeta {
+        padding: 22px 18px;
+    }
+
+    .asesoria-imagen {
+        height: 140px;
+    }
+
+    .asesoria-tarjeta h3 {
+        font-size: 20px;
+    }
+
+    .asesoria-tarjeta p {
+        min-height: auto;
+        font-size: 14px;
+    }
+
+    .asesoria-boton {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 380px) {
+    .asesoria-seccion {
+        padding: 35px 12px;
+    }
+
+    .asesoria-encabezado h2 {
+        font-size: 22px;
+    }
+
+    .asesoria-tarjeta {
+        padding: 18px 14px;
+    }
+}
+
+.asesoria-imagen img {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    object-fit: contain;
+    display: block;
+}
+
+
+.asesoria-recomendacion {
+    max-width: 750px;
+    margin: 55px auto 0;
+    padding: 35px;
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.asesoria-recomendacion h3 {
+    margin-bottom: 12px;
+    font-size: 24px;
+    color: #222222;
+}
+
+.asesoria-recomendacion p {
+    margin-bottom: 22px;
+    color: #666666;
+    line-height: 1.6;
+}
+
+.asesoria-recomendacion form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.asesoria-recomendacion label {
+    font-weight: 600;
+    color: #333333;
+}
+
+.asesoria-recomendacion select {
+    width: 100%;
+    max-width: 400px;
+    padding: 13px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.asesoria-recomendacion .asesoria-boton {
+    border: none;
+    cursor: pointer;
+}
+
+#asesoria-resultado {
+    margin-top: 22px;
+    padding: 20px;
+    border-radius: 8px;
+    background: #f5f5f5;
+    color: #333333;
+    line-height: 1.6;
+    display: none;
+}
+
+#asesoria-imagen-resultado {
+    display: block;
+    width: 100%;
+    max-width: 180px;
+    height: 150px;
+    object-fit: contain;
+    margin: 0 auto 15px;
+}
+
+#asesoria-texto-resultado {
+    margin: 0;
+    color: #333333;
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    .asesoria-recomendacion {
+        margin: 35px 15px 0;
+        padding: 25px 18px;
+    }
+
+    .asesoria-recomendacion h3 {
+        font-size: 21px;
+    }
+}
+
+#asesoria-resultado.asesoria-resultado-visible {
+    display: block;
+}
